@@ -7,7 +7,8 @@ module.exports = withModuleFederationPlugin({
   name: "mfe2",
 
   exposes: {
-    "./Module": "./projects/mfe2/src/app/commments/commments.module.ts",
+    "./CommentsModule": "./projects/mfe2/src/app/comments/comments.module.ts",
+    "./AppModule": "./projects/mfe2/src/app/app.module.ts",
   },
 
   shared: {

@@ -17,6 +17,9 @@ import { RouterModule } from '@angular/router';
         component: TextComponent
       }
     ])
+  ],
+  providers: [
+
   ]
 })
-export class CommmentsModule { }
+export class CommentsModule { }

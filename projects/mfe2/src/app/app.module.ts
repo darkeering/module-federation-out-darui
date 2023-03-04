@@ -1,5 +1,5 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -9,15 +9,20 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot([
+    CommonModule,
+    RouterModule.forChild([
       {
-        path: 'mfe2',
-        loadChildren: () => import('./commments/commments.module').then(m => m.CommmentsModule)
+        path: '',
+        component: AppComponent,
+        children: [
+          {
+            path: 'comments',
+            loadChildren: () => import('./comments/comments.module').then(m => m.CommentsModule)
+          },
+        ]
       }
     ])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: []
 })
 export class AppModule { }
