@@ -9,6 +9,7 @@ module.exports = withModuleFederationPlugin({
   exposes: {
     "./CommentsModule": "./projects/mfe2/src/app/comments/comments.module.ts",
     "./AppModule": "./projects/mfe2/src/app/app.module.ts",
+    "./DashboardModule": "./projects/mfe2/src/app/dashboard.module.ts",
   },
 
   shared: {

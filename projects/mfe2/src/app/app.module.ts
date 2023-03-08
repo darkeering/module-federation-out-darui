@@ -1,12 +1,18 @@
-import { CommonModule } from '@angular/common';
+import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { Test1Guard } from './guard/test1.guard';
+import { Test2Guard } from './guard/test2.guard';
+import { NoComponent } from './no/no.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NoComponent
   ],
   imports: [
     CommonModule,
@@ -20,9 +26,14 @@ import { AppComponent } from './app.component';
             loadChildren: () => import('./comments/comments.module').then(m => m.CommentsModule)
           },
         ]
+      },
+      {
+        path: '**',
+        component: NoComponent
       }
     ])
   ],
-  providers: []
+  providers: [
+  ]
 })
 export class AppModule { }

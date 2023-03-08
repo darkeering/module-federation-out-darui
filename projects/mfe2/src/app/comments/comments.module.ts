@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TextComponent } from './text/text.component';
 import { RouterModule } from '@angular/router';
+import { SharedLibModule } from '@darkeering/shared-lib';
 
 
 
@@ -11,6 +12,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    SharedLibModule,
     RouterModule.forChild([
       {
         path: '',
@@ -19,7 +21,6 @@ import { RouterModule } from '@angular/router';
     ])
   ],
   providers: [
-
   ]
 })
 export class CommentsModule { }

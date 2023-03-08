@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SharedLibService } from 'projects/shared-lib/src/public-api';
+import { SharedLibService } from '@darkeering/shared-lib';
 
 @Component({
   selector: 'app-text',
