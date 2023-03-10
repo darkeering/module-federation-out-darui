@@ -17,4 +17,8 @@ export class TextComponent {
       this.count = count
     })
   }
+
+  setCount(count: any) {
+    this.sharedLibService.setCount(count)
+  }
 }

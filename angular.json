@@ -25,7 +25,6 @@
 							"projects/mfe2/src/assets"
 						],
 						"styles": [
-							"projects/mfe2/src/styles.css"
 						],
 						"scripts": [],
 						"extraWebpackConfig": "projects/mfe2/webpack.config.js",

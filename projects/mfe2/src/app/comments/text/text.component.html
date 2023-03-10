@@ -1,2 +1,7 @@
-<p>text works! name = {{name}}; count = {{count}}</p>
-<lib-shared-lib></lib-shared-lib>
+<div class="communication">
+  通信: name={{ name }};count={{ count }}
+  <div>
+    <button nz-button nzType="primary" (click)="setCount(count+1)">+1</button>{{' '}}
+    <button nz-button nzType="primary" (click)="setCount(count-1)">-1</button>
+  </div>
+</div>
